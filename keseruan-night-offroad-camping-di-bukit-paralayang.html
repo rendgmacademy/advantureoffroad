@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keseruan Night Offroad & Camping di Bukit Paralayang – Offroad Batu Professional</title>
+    <meta name="description"
+        content="Pengalaman tak terlupakan menikmati city light Kota Batu dari ketinggian setelah jalur offroad malam. Night offroad dan camping di Bukit Paralayang Batu." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --green-deep: #0f4c2a;
+            --green-mid: #1a6e3e;
+            --green-light: #d6eedf;
+            --amber: #f5a623;
+            --amber-dark: #d4881a;
+            --dark: #0b1c12;
+            --surface: #f5f7f5;
+            --text: #1c2b21;
+            --muted: #6b7c70;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--surface);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar {
+            background: rgba(11, 28, 18, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.75rem 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: #fff !important;
+            letter-spacing: 1px;
+        }
+
+        .navbar-brand .accent {
+            color: var(--amber);
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.75) !important;
+            font-weight: 500;
+            font-size: 0.92rem;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--amber) !important;
+        }
+
+        .btn-cta-nav {
+            background: var(--amber);
+            color: var(--dark) !important;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            padding: 0.5rem 1.4rem !important;
+        }
+
+        .btn-cta-nav:hover {
+            background: var(--amber-dark);
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        .article-hero {
+            position: relative;
+            min-height: 420px;
+            display: flex;
+            align-items: flex-end;
+            background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnHdVqc98HMnO246S-QWkD2Nad9ByyA576Lo1GYULxtOsDz5q8UkBD6-0Dmfdqzp9nSdhsNEvjDwQZWW6bS_UlcmU02kGHVMRCMGpMXOKuyfhs0bKzrWcohLmogPMGuozvH2VCdIa0W9EqL-giAY5Ks7tfGuMm24eoL5_0Vy0nIQUWjm0FPrc0z95ofnMWfAUKPxYc1mmZtYvqmyECiZNqNb2HGQMNHBIoDQ7CT7l7J7P6Q1mudYeS6dB40hYZ-QTOyOs8o0S3xnp2') center/cover no-repeat;
+        }
+
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11, 28, 18, 0.95) 20%, rgba(26, 110, 62, 0.4) 100%);
+        }
+
+        .article-hero .inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .article-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .article-tag {
+            display: inline-block;
+            background: var(--amber);
+            color: var(--dark);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .breadcrumb-item a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.88rem;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--amber);
+            font-size: 0.88rem;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .article-content {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .article-content p {
+            font-size: 1.02rem;
+            line-height: 1.85;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--green-deep);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--amber);
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--amber);
+            background: rgba(245, 166, 35, 0.08);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 0.75rem 0.75rem 0;
+            font-style: italic;
+            color: var(--green-deep);
+        }
+
+        .article-content img {
+            width: 100%;
+            border-radius: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .toc-card {
+            background: #fff;
+            border: 1.5px solid #e8eeea;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc-card h5 {
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            color: var(--green-deep);
+        }
+
+        .toc-card ol {
+            padding-left: 1.25rem;
+            margin-bottom: 0;
+        }
+
+        .toc-card li {
+            padding: 0.3rem 0;
+        }
+
+        .toc-card a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .toc-card a:hover {
+            color: var(--green-deep);
+        }
+
+        .faq-section {
+            background: #fff;
+            border: 1.5px solid #e8eeea;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .faq-section h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #f0f3f1;
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-item p {
+            font-size: 0.92rem;
+            margin-bottom: 0;
+        }
+
+        .author-bio {
+            background: #fff;
+            border: 1.5px solid #e8eeea;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        .author-bio img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--amber);
+        }
+
+        .author-bio h5 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-top: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-bio p {
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+
+        .related-card {
+            background: #fff;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            border: 1.5px solid #e8eeea;
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-card .img-wrap {
+            overflow: hidden;
+            height: 180px;
+        }
+
+        .related-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .related-card:hover .img-wrap img {
+            transform: scale(1.06);
+        }
+
+        .related-card-body {
+            padding: 1.25rem;
+        }
+
+        .related-card h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .related-card h5 a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .related-card h5 a:hover {
+            color: var(--green-deep);
+        }
+
+        .tag-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 50px;
+            margin-bottom: 0.75rem;
+        }
+
+        .tag-green {
+            background: var(--green-light);
+            color: var(--green-deep);
+        }
+
+        .tag-amber {
+            background: rgba(245, 166, 35, 0.15);
+            color: var(--amber-dark);
+        }
+
+        .tag-blue {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+        }
+
+        .section-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--amber);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text);
+            line-height: 1.1;
+        }
+
+        .cta-band {
+            background: var(--amber);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='0.05'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cta-band .inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-band h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-transform: uppercase;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .cta-band p {
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 1.05rem;
+        }
+
+        .btn-wa {
+            background: var(--dark);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            padding: 0.9rem 2.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.25s;
+        }
+
+        .btn-wa:hover {
+            background: var(--green-deep);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        footer .footer-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        footer .footer-brand span {
+            color: var(--amber);
+        }
+
+        footer h6 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 1.25rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--amber);
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-btn:hover {
+            background: var(--amber);
+            border-color: var(--amber);
+            color: var(--dark);
+        }
+
+        /* ─── FLOATING BUTTONS ──────────────────────── */
+        .floating-btns {
+            position: fixed;
+            bottom: 1.75rem;
+            right: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1050;
+        }
+
+        .btn-floating {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-floating:hover {
+            transform: scale(1.1) translateY(-5px);
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-top {
+            background: var(--green-deep);
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .floating-top.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .wa-float {
+            background: #25D366;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .wa-float:hover {
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero {
+                min-height: 320px;
+            }
+
+            .article-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .article-content {
+                padding: 0 0.5rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .faq-section,
+            .author-bio {
+                padding: 1.25rem;
+            }
+
+            .floating-btns {
+                bottom: 1.25rem;
+                right: 1.25rem;
+                gap: 0.75rem;
+            }
+
+            .btn-floating {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .share-bar {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: 1.5px solid #e0e8e3;
+            color: var(--text);
+        }
+
+        .share-btn:hover {
+            background: var(--green-deep);
+            border-color: var(--green-deep);
+            color: #fff;
+        }
+
+        .info-box {
+            background: var(--green-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--green-deep);
+        }
+
+        .info-box h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--green-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box p {
+            font-size: 0.92rem;
+            margin-bottom: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 3px solid var(--green-light);
+        }
+
+        .timeline-item:last-child {
+            border-left: 3px solid transparent;
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--amber);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px var(--amber);
+        }
+
+        .timeline-time {
+            font-weight: 800;
+            color: var(--green-deep);
+            font-size: 1rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-top: 0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-hero {
+                min-height: 320px;
+            }
+
+            .article-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .article-content {
+                padding: 0 0.5rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .faq-section,
+            .author-bio {
+                padding: 1.25rem;
+            }
+
+            .floating-btns {
+                bottom: 1.25rem;
+                right: 1.25rem;
+                gap: 0.75rem;
+            }
+
+            .btn-floating {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-triangle-fill me-1" style="font-size:1.1rem;color:var(--amber)"></i>
+                Offroad<span class="accent">Batu</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-2 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Paket Offroad</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item ms-lg-3"><a class="nav-link btn-cta-nav"
+                            href="https://wa.me/62895639068080">HUBUNGI KAMI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <header class="article-hero">
+        <div class="container inner pb-5" style="padding-top:120px;">
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-fill me-1"></i>Home</a></li>
+                    <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                    <li class="breadcrumb-item active">Night Offroad & Camping</li>
+                </ol>
+            </nav>
+            <span class="article-tag mb-3">Event</span>
+            <h1 class="mt-2">Keseruan Night Offroad & Camping di Bukit Paralayang</h1>
+            <div class="article-meta mt-3">
+                <span><i class="bi bi-calendar3 me-1"></i>05 Mar 2024</span>
+                <span class="ms-3"><i class="bi bi-clock me-1"></i>3 min read</span>
+                <span class="ms-3"><i class="bi bi-person me-1"></i>Tim Offroad Batu</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE CONTENT -->
+    <main class="py-5">
+        <div class="container">
+            <div class="article-content fade-up">
+
+                <!-- TOC -->
+                <div class="toc-card">
+                    <h5><i class="bi bi-list-ul me-2"></i>Daftar Isi</h5>
+                    <ol>
+                        <li><a href="#intro">Apa Itu Night Offroad?</a></li>
+                        <li><a href="#jalur">Jalur Night Offroad ke Bukit Paralayang</a></li>
+                        <li><a href="#camping">Camping di Puncak Bukit</a></li>
+                        <li><a href="#itinerary">Itinerary Lengkap</a></li>
+                        <li><a href="#persiapan">Apa yang Perlu Dibawa?</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ol>
+                </div>
+
+                <p>Bayangkan ini: malam gelap gulita, hanya sorot lampu jeep yang menerangi jalur berbatu di lereng
+                    bukit. Suara mesin diesel mengaum menembus kesunyian malam. Lalu, di puncak perjalanan, Anda
+                    disambut oleh pemandangan city light Kota Batu yang berkilauan bak lautan bintang di bawah sana.</p>
+
+                <p>Itulah pengalaman <strong>Night Offroad & Camping di Bukit Paralayang</strong> — salah satu paket
+                    wisata petualangan paling iconic di Batu Malang yang menggabungkan keseruan offroad malam hari
+                    dengan ketenangan camping di puncak bukit.</p>
+
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnHdVqc98HMnO246S-QWkD2Nad9ByyA576Lo1GYULxtOsDz5q8UkBD6-0Dmfdqzp9nSdhsNEvjDwQZWW6bS_UlcmU02kGHVMRCMGpMXOKuyfhs0bKzrWcohLmogPMGuozvH2VCdIa0W9EqL-giAY5Ks7tfGuMm24eoL5_0Vy0nIQUWjm0FPrc0z95ofnMWfAUKPxYc1mmZtYvqmyECiZNqNb2HGQMNHBIoDQ7CT7l7J7P6Q1mudYeS6dB40hYZ-QTOyOs8o0S3xnp2"
+                    alt="Night offroad camping" />
+
+                <h2 id="intro">Apa Itu Night Offroad?</h2>
+                <p>Night offroad adalah pengalaman offroad yang dilakukan setelah matahari terbenam, biasanya dimulai
+                    pukul 18.00-19.00 WIB. Kegelapan malam menambah tantangan tersendiri karena visibilitas yang
+                    terbatas. Hanya mengandalkan lampu kendaraan dan headlamp, setiap tikungan dan tanjakan terasa jauh
+                    lebih menggetarkan jantung dibanding offroad di siang hari.</p>
+
+                <blockquote>
+                    "Night offroad memberikan level adrenalin yang berbeda. Suara alam di malam hari, kegelapan yang
+                    menelan jalur di depan, dan surprise di setiap belokan — ini adalah pengalaman yang tidak bisa Anda
+                    dapatkan di siang hari." — Driver Night Offroad Batu
+                </blockquote>
+
+                <h2 id="jalur">Jalur Night Offroad ke Bukit Paralayang</h2>
+                <p>Jalur menuju Bukit Paralayang pada malam hari melewati beberapa terrain yang menantang:</p>
+
+                <ul>
+                    <li><strong>Fase 1 — Jalan setapak perkebunan apel:</strong> Jalur sempit diapit kebun apel dengan
+                        tanah yang lembek. Pada malam hari, kabut tipis seringkali menyelimuti area ini.</li>
+                    <li><strong>Fase 2 — Tanjakan berpasir:</strong> Bagian ini merupakan area paling menantang.
+                        Kemiringan hingga 35° dengan permukaan pasir yang mudah membuat ban spin.</li>
+                    <li><strong>Fase 3 — Jalur hutan:</strong> Menembus area pepohonan dengan jalur yang cukup sempit.
+                        Suara satwa malam menambah atmosfer yang menegangkan.</li>
+                    <li><strong>Fase 4 — Puncak Bukit Paralayang:</strong> Tiba di area terbuka dengan pemandangan 360°
+                        Kota Batu dari ketinggian ±1.200 mdpl.</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4><i class="bi bi-moon-stars me-2"></i>Best Time!</h4>
+                    <p>Waktu terbaik untuk night offroad adalah saat bulan purnama — Anda bisa melihat siluet pegunungan
+                        dengan cahaya bulan yang dramatis. Tapi untuk pengalaman adrenalin maksimal, pilih malam tanpa
+                        bulan!</p>
+                </div>
+
+                <h2 id="camping">Camping di Puncak Bukit</h2>
+                <p>Setelah menaklukkan jalur, saatnya mendirikan tenda di puncak Bukit Paralayang. Area camping kami
+                    sudah disiapkan dengan fasilitas dasar termasuk:</p>
+
+                <ul>
+                    <li><strong>Tenda dome</strong> kapasitas 2-4 orang (sudah disediakan)</li>
+                    <li><strong>Sleeping bag</strong> untuk menghadapi suhu malam 12-18°C</li>
+                    <li><strong>Area campfire</strong> dengan kayu bakar yang sudah disiapkan</li>
+                    <li><strong>BBQ set</strong> untuk makan malam bersama</li>
+                    <li><strong>Toilet portable</strong> yang bersih dan tertutup</li>
+                    <li><strong>Area parkir jeep</strong> yang aman dan terorganisir</li>
+                </ul>
+
+                <p>Momen paling magical adalah saat Anda duduk di depan api unggun, menikmati jagung bakar sambil
+                    menatap kerlap-kerlip lampu kota dari ketinggian. Udara dingin pegunungan membuat secangkir kopi
+                    atau wedang jahe rasanya 10 kali lebih nikmat!</p>
+
+                <h2 id="itinerary">Itinerary Lengkap</h2>
+                <p>Berikut jadwal lengkap paket Night Offroad & Camping:</p>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16.00 WIB — Meeting Point & Registrasi</div>
+                    <div class="timeline-desc">Berkumpul di basecamp, registrasi peserta, dan pembagian perlengkapan.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">17.00 WIB — Briefing Safety</div>
+                    <div class="timeline-desc">Penjelasan jalur, prosedur keselamatan, dan pembagian kelompok kendaraan.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">17.30 WIB — Sunset Photo Session</div>
+                    <div class="timeline-desc">Sesi foto sunset di area basecamp sebelum keberangkatan.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">18.00 WIB — Start Night Offroad!</div>
+                    <div class="timeline-desc">Konvoi jeep berangkat menuju Bukit Paralayang melewati 4 fase jalur.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">19.30 WIB — Tiba di Puncak</div>
+                    <div class="timeline-desc">Menikmati view city light, mendirikan tenda, dan setting campfire.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">20.00 WIB — BBQ Dinner & Campfire</div>
+                    <div class="timeline-desc">Makan malam bersama dengan menu BBQ, jagung bakar, dan wedang jahe.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">21.30 WIB — Stargazing & Free Time</div>
+                    <div class="timeline-desc">Sesi stargazing, musik akustik, games. Istirahat di tenda.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">05.00 WIB — Sunrise!</div>
+                    <div class="timeline-desc">Bangun pagi untuk menyaksikan sunrise spektakuler dari puncak bukit.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">07.00 WIB — Sarapan & Packing</div>
+                    <div class="timeline-desc">Sarapan, bersih-bersih area, dan persiapan turun.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">08.00 WIB — Return Trip</div>
+                    <div class="timeline-desc">Offroad turun menuju basecamp dengan rute yang berbeda. Selesai!</div>
+                </div>
+
+                <h2 id="persiapan">Apa yang Perlu Dibawa?</h2>
+                <p>Karena ini adalah paket all-inclusive, sebagian besar supply sudah kami sediakan. Namun berikut
+                    barang pribadi yang perlu Anda bawa:</p>
+
+                <ol>
+                    <li><strong>Pakaian hangat</strong> — Suhu malam di bukit bisa turun hingga 12°C</li>
+                    <li><strong>Jaket tebal</strong> — Windbreaker atau jaket gunung</li>
+                    <li><strong>Pakaian ganti</strong> — Minimal 1 set untuk setelah offroad</li>
+                    <li><strong>Toiletries pribadi</strong> — Sikat gigi, handuk kecil</li>
+                    <li><strong>Obat pribadi</strong> — Jika ada obat rutin yang harus diminum</li>
+                    <li><strong>HP + powerbank</strong> — Untuk dokumentasi momen epic</li>
+                    <li><strong>Kamera (opsional)</strong> — Untuk night photography yang lebih profesional</li>
+                </ol>
+
+                <blockquote>
+                    "Bintang-bintang terlihat sangat jelas dari bukit ini. Bawa kamera dan tripod kalau bisa — foto
+                    langit malamnya luar biasa!" — Peserta Night Offroad 2024
+                </blockquote>
+
+                <!-- Share -->
+                <div class="share-bar">
+                    <span style="font-weight:700; font-size:0.9rem; display:flex; align-items:center;">Bagikan:</span>
+                    <a href="#" class="share-btn"><i class="bi bi-facebook"></i> Facebook</a>
+                    <a href="#" class="share-btn"><i class="bi bi-twitter-x"></i> Twitter</a>
+                    <a href="#" class="share-btn"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                    <a href="#" class="share-btn"><i class="bi bi-link-45deg"></i> Salin Link</a>
+                </div>
+
+                <!-- FAQ -->
+                <div class="faq-section" id="faq">
+                    <h2><i class="bi bi-patch-question me-2"></i>Pertanyaan Umum (FAQ)</h2>
+                    <div class="faq-item">
+                        <h4>Apakah aman untuk night offroad?</h4>
+                        <p>Sangat aman! Semua jeep dilengkapi lampu offroad tambahan yang sangat terang, dan driver kami
+                            sudah sangat hafal jalurnya. Kami juga selalu jalan convoy dengan backup vehicle di
+                            belakang.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Berapa harga paket Night Offroad & Camping?</h4>
+                        <p>Mulai dari Rp 650.000 per orang sudah termasuk jeep, driver, tenda, sleeping bag, BBQ dinner,
+                            sarapan, dan semua fasilitas camping. Hubungi kami untuk promo group!</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Apakah tersedia untuk acara gathering perusahaan?</h4>
+                        <p>Tentu! Paket ini sangat populer untuk corporate gathering, team building, dan retreat
+                            perusahaan. Kami bisa mengakomodasi hingga 100+ peserta dengan customisasi acara sesuai
+                            kebutuhan.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Bagaimana jika hujan saat camping?</h4>
+                        <p>Tenda kami waterproof dan sudah teruji di berbagai cuaca. Kami juga menyediakan terpal
+                            tambahan untuk area campfire. Jika cuaca sangat ekstrem, kami akan mengambil keputusan
+                            reschedule demi keselamatan.</p>
+                    </div>
+                </div>
+
+                <!-- Author Bio -->
+                <div class="author-bio">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnHdVqc98HMnO246S-QWkD2Nad9ByyA576Lo1GYULxtOsDz5q8UkBD6-0Dmfdqzp9nSdhsNEvjDwQZWW6bS_UlcmU02kGHVMRCMGpMXOKuyfhs0bKzrWcohLmogPMGuozvH2VCdIa0W9EqL-giAY5Ks7tfGuMm24eoL5_0Vy0nIQUWjm0FPrc0z95ofnMWfAUKPxYc1mmZtYvqmyECiZNqNb2HGQMNHBIoDQ7CT7l7J7P6Q1mudYeS6dB40hYZ-QTOyOs8o0S3xnp2"
+                        alt="Tim Offroad Batu" />
+                    <h5>Tim Offroad Batu</h5>
+                    <p>Provider layanan wisata petualangan terpercaya di Batu Malang sejak 2015. Armada terbaik, driver
+                        profesional, dan pengalaman tak terlupakan.</p>
+                </div>
+
+            </div>
+
+            <!-- RELATED ARTICLES -->
+            <div class="article-content mt-5 fade-up">
+                <span class="section-label">Artikel Lainnya</span>
+                <h3 class="section-title mb-4">Baca Juga</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="related-card">
+                            <div class="img-wrap">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmHfDjOhl39p6Vj3klnmB0GX4fRIWS_rCJ0JAWZzhxJizUR4fL7MkckQEtgziK5UNTQQk6hDMqyKxh4UFcLDenpvtqAYJw3OiKckP_QvVgebVgTnjcyTIAO8wmSCjoNzvSi3t11mlgrMnoP5jASXckDw8OmI88kPOGk30XJAZKUjgPZr-vLTrrvkQoxz-5m5qMTGPS_6bmb6xP219JVLAyy2uELrxBe0UHpDYAEE7iE58J82Xd8G7kWI-pb5kKq0bkgfEqvNBekocO"
+                                    alt="5 Rute Offroad" />
+                            </div>
+                            <div class="related-card-body">
+                                <span class="tag-badge tag-amber">Rute Populer</span>
+                                <h5><a href="5-rute-offroad-paling-menantang-di-batu-berani-coba.html">5 Rute Offroad
+                                        Paling Menantang di Batu</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="related-card">
+                            <div class="img-wrap">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3uaWv5uFou5pSODzaFtmAtMv9whuS1rgyq1N51wkgup6mj2zwVJSJb6hntZvmpXCsywoaoomPo3Tw30xJgwEv_kZxMA_U5wDeQ18d7nZ6XrzlYssB6ZcvzRcZs7Bdy2qnzJPJM3LbgvX9QkOuhU91cNSH-ZGXH6qhKhJpI4Q6NGHOhCl_f8C-Pkc7cIMjds90iaA-1KHjlWyr5sc1lLfoojtz1Tu1XOik48ehpzVis_gHkijJdKMHCkrRl9S6V4vg8qsbmZLflutj"
+                                    alt="Persiapan Offroad" />
+                            </div>
+                            <div class="related-card-body">
+                                <span class="tag-badge tag-green">Tips Offroad</span>
+                                <h5><a href="persiapan-wajib-sebelum-offroad-checklist-lengkap.html">Persiapan Wajib
+                                        Sebelum Offroad: Checklist Lengkap</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="related-card">
+                            <div class="img-wrap">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4eJ_wbqlzOZ0p0w_-PuD9LVa4mkI5-A7mc3i-115lE6MSQhEaruz3JjWslzGSHEQzuNXoex-SP1h9LJVijC0e_OpUmziFC_1T881VOaQndG2NtKLVLeoXQSlVKcK1XOAPYKEjk0XvANX4YPfY83lsgtIGYx6bK4VUL_ndCT5RMhXnTcdyzBwjna7rZvweVRMUV7CTbsUeoSvLR3ISuZidCZNAx12olvQrYAZMOmGkvu2dyeFylOh6RkPP1ZWaOJTcaYbonP-DXLeL"
+                                    alt="Masakan Overland" />
+                            </div>
+                            <div class="related-card-body">
+                                <span class="tag-badge tag-green">Tips Offroad</span>
+                                <h5><a href="menu-masakan-praktis-lezat-saat-overland.html">Menu Masakan Praktis & Lezat
+                                        Saat Overland</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA BAND -->
+    <section class="cta-band py-5" style="padding-top:4.5rem !important; padding-bottom:4.5rem !important;">
+        <div class="container py-3 inner text-center">
+            <h2 class="mb-3">Siap Untuk <em style="font-style:normal;text-decoration:underline;">Petualangan</em>?</h2>
+            <p class="mb-4">Hubungi kami sekarang untuk mendapatkan penawaran spesial paket offroad di Batu Malang.</p>
+            <a href="https://wa.me/62895639068080" class="btn-wa"><i class="bi bi-whatsapp"></i> Chat WhatsApp
+                Sekarang</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand mb-3">Offroad<span>Batu</span></div>
+                    <p style="font-size:0.85rem; line-height:1.7;">Provider layanan wisata petualangan terpercaya di
+                        Batu Malang. Armada terbaik, driver profesional.</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Navigasi</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="#">Paket Offroad</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6>Layanan</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#">Fun Offroad</a></li>
+                        <li><a href="#">Extreme Offroad</a></li>
+                        <li><a href="#">Sunrise Tour</a></li>
+                        <li><a href="#">Camping & Gathering</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Kontak</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-3" style="font-size:0.88rem;">
+                        <li class="d-flex gap-3"><i class="bi bi-geo-alt-fill text-warning mt-1"></i><span>Jl. Terusan
+                                Wisata No. 1, Batu, Malang, Jawa Timur</span></li>
+                        <li class="d-flex gap-3"><i
+                                class="bi bi-telephone-fill text-warning"></i><span>0895-6390-68080</span></li>
+                        <li class="d-flex gap-3"><i
+                                class="bi bi-envelope-fill text-warning"></i><span>info@offroadbatu.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <p class="text-center mb-0" style="font-size:0.8rem; opacity:0.45;">© 2026 Offroad Batu Professional. All
+                Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <button class="btn-floating floating-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            title="Back to Top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+        <a href="https://wa.me/62895639068080" class="btn-floating wa-float" target="_blank" title="Chat WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // Floating buttons visibility
+        window.addEventListener('scroll', () => {
+            const topBtn = document.querySelector('.floating-top');
+            if (window.scrollY > 300) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>

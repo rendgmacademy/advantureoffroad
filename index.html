@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offroad Batu Professional – Home</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        :root {
+            --bs-primary: #0f4c2a;
+            --bs-primary-rgb: 15, 76, 42;
+            --green-deep: #0f4c2a;
+            --green-mid: #1a6e3e;
+            --green-light: #d6eedf;
+            --amber: #f5a623;
+            --amber-dark: #d4881a;
+            --dark: #0b1c12;
+            --surface: #f5f7f5;
+            --text: #1c2b21;
+            --muted: #6b7c70;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--surface);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .display-font {
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        /* ─── NAVBAR ─────────────────────────────────── */
+        .navbar {
+            background: rgba(11, 28, 18, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.75rem 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: #fff !important;
+            letter-spacing: 1px;
+        }
+
+        .navbar-brand .accent {
+            color: var(--amber);
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.75) !important;
+            font-weight: 500;
+            font-size: 0.92rem;
+            letter-spacing: 0.3px;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--amber) !important;
+        }
+
+        .btn-cta-nav {
+            background: var(--amber);
+            color: var(--dark) !important;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            padding: 0.5rem 1.4rem !important;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-cta-nav:hover {
+            background: var(--amber-dark);
+            transform: translateY(-1px);
+        }
+
+        /* ─── HERO ──────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCA5BBpWwbff5hOKZjcqI7HJuhhGpX7GwaFQz01_DmicU3i3YXIiepBdnA7iWtp5k5vfe1ntbZpEuNIhAaGdFlkboc9yzAk69nuGLSgQ45id5ITDP6pe9kxj4dS_3HGNyTPsjDChORpHh_SOJLIghHJ519SG9a1MsqrJqonREwvFvm-15e0cC3RDKlRkjxiio9Adj_UI-7hN6od8k7hMNepbaj0FdONxviPMzgKqp6LtdF9YDwo3jl-ED2bXbAB3d9eI2dRxoCsSrYB') center/cover no-repeat;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 28, 18, 0.88) 0%, rgba(15, 76, 42, 0.55) 60%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: var(--amber);
+            color: var(--dark);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.05;
+            text-transform: uppercase;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--amber);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.82);
+            max-width: 520px;
+            line-height: 1.7;
+        }
+
+        .btn-primary-custom {
+            background: var(--green-deep);
+            color: #fff;
+            border: 2px solid var(--green-deep);
+            border-radius: 50px;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.25s;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--green-mid);
+            border-color: var(--green-mid);
+            transform: translateY(-2px);
+        }
+
+        .btn-amber {
+            background: var(--amber);
+            color: var(--dark);
+            border: 2px solid var(--amber);
+            border-radius: 50px;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.25s;
+        }
+
+        .btn-amber:hover {
+            background: var(--amber-dark);
+            border-color: var(--amber-dark);
+            color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Stats Bar */
+        .hero-stats-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 2;
+        }
+
+        .hero-stat {
+            padding: 1.4rem 2rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .hero-stat:last-child {
+            border-right: none;
+        }
+
+        .hero-stat .num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--amber);
+            line-height: 1;
+        }
+
+        .hero-stat .label {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 0.2rem;
+        }
+
+        /* ─── SECTION LABELS ─────────────────────────── */
+        .section-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text);
+            line-height: 1.1;
+        }
+
+        /* ─── ABOUT ─────────────────────────────────── */
+        .about-section {
+            background: #fff;
+        }
+
+        .about-img-wrap {
+            position: relative;
+            border-radius: 1.25rem;
+            overflow: hidden;
+        }
+
+        .about-img-wrap img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            display: block;
+            border-radius: 1.25rem;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 2rem;
+            left: -1.5rem;
+            background: var(--green-deep);
+            color: #fff;
+            border-radius: 1rem;
+            padding: 1.25rem 1.75rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        .about-badge .big {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .about-badge .small {
+            font-size: 0.8rem;
+            opacity: 0.85;
+            margin-top: 0.2rem;
+            max-width: 120px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #edf1ee;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green-deep);
+            font-size: 1.2rem;
+        }
+
+        .feature-title {
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: var(--text);
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* ─── SERVICES ───────────────────────────────── */
+        .services-section {
+            background: var(--surface);
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 1.25rem;
+            padding: 2.25rem;
+            border: 1.5px solid #e8eeea;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--green-deep);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(15, 76, 42, 0.12);
+            border-color: var(--green-light);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: var(--green-light);
+            color: var(--green-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--green-deep);
+            color: #fff;
+        }
+
+        .service-card h5 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .link-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--green-deep);
+            text-decoration: none;
+            margin-top: 1.25rem;
+            transition: gap 0.2s;
+        }
+
+        .link-arrow:hover {
+            gap: 0.75rem;
+            color: var(--green-mid);
+        }
+
+        /* ─── STATS BAND ─────────────────────────────── */
+        .stats-band {
+            background: var(--green-deep);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            position: relative;
+        }
+
+        .stat-item+.stat-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25%;
+            height: 50%;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--amber);
+            line-height: 1;
+            display: block;
+        }
+
+        .stat-lbl {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.75);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        /* ─── BLOG ───────────────────────────────────── */
+        .blog-section {
+            background: #fff;
+        }
+
+        .blog-card {
+            border-radius: 1.25rem;
+            overflow: hidden;
+            border: 1.5px solid #e8eeea;
+            background: #fff;
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card .img-wrap {
+            overflow: hidden;
+            height: 210px;
+        }
+
+        .blog-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .blog-card:hover .img-wrap img {
+            transform: scale(1.06);
+        }
+
+        .blog-card-body {
+            padding: 1.5rem;
+        }
+
+        .tag-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.25rem 0.8rem;
+            border-radius: 50px;
+            background: var(--green-light);
+            color: var(--green-deep);
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card h6 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 0.6rem;
+        }
+
+        .blog-meta {
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        /* ─── CTA BAND ───────────────────────────────── */
+        .cta-band {
+            background: var(--amber);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cta-band .inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-band h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-transform: uppercase;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .cta-band p {
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 1.05rem;
+        }
+
+        .btn-wa {
+            background: var(--dark);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            padding: 0.9rem 2.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.25s;
+            border: none;
+        }
+
+        .btn-wa:hover {
+            background: var(--green-deep);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* ─── FOOTER ─────────────────────────────────── */
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        footer .footer-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        footer .footer-brand span {
+            color: var(--amber);
+        }
+
+        footer h6 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 1.25rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--amber);
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-btn:hover {
+            background: var(--amber);
+            border-color: var(--amber);
+            color: var(--dark);
+        }
+
+        /* ─── FLOATING BUTTONS ──────────────────────── */
+        .floating-btns {
+            position: fixed;
+            bottom: 1.75rem;
+            right: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1050;
+        }
+
+        .btn-floating {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-floating:hover {
+            transform: scale(1.1) translateY(-5px);
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-top {
+            background: var(--green-deep);
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .floating-top.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .wa-float {
+            background: #25D366;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .wa-float:hover {
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ─── SCROLL FADE ────────────────────────────── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .fade-up:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .fade-up:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        /* Navbar toggler dark */
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        @media (max-width: 767px) {
+            .about-badge {
+                left: 1rem;
+            }
+
+            .hero-stat {
+                padding: 1rem;
+            }
+
+            .stat-item+.stat-item::before {
+                display: none;
+            }
+
+            .about-img-wrap img {
+                height: 320px;
+            }
+
+            .floating-btns {
+                bottom: 1.25rem;
+                right: 1.25rem;
+                gap: 0.75rem;
+            }
+
+            .btn-floating {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══════ NAVBAR ═══════ -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-triangle-fill me-1" style="font-size:1.1rem;color:var(--amber)"></i>
+                Offroad<span class="accent">Batu</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-2 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Paket Offroad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link btn-cta-nav" href="https://wa.me/62895639068080">HUBUNGI KAMI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════ HERO ═══════ -->
+    <header class="hero">
+        <div class="container hero-content py-5">
+            <div class="row align-items-center" style="min-height:85vh">
+                <div class="col-lg-7">
+                    <span class="hero-eyebrow"><i class="bi bi-geo-alt-fill me-1"></i> Kota Batu, Malang</span>
+                    <h1>Provider Offroad<br /><em>Batu Malang</em><br />Profesional</h1>
+                    <p class="mt-3 mb-4">Nikmati petualangan tak terlupakan menyusuri hutan dan sungai dengan armada
+                        terbaik dan driver berpengalaman.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#services" class="btn-primary-custom">
+                            <i class="bi bi-compass me-2"></i>Pilih Paket
+                        </a>
+                        <a href="https://wa.me/62895639068080" class="btn-amber">
+                            <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Stats Bar -->
+        <div class="hero-stats-bar d-none d-md-block">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-3 hero-stat">
+                        <div class="num">1000+</div>
+                        <div class="label">Trip Sukses</div>
+                    </div>
+                    <div class="col-3 hero-stat">
+                        <div class="num">50+</div>
+                        <div class="label">Armada Jeep</div>
+                    </div>
+                    <div class="col-3 hero-stat">
+                        <div class="num">100%</div>
+                        <div class="label">Kepuasan</div>
+                    </div>
+                    <div class="col-3 hero-stat">
+                        <div class="num">8 Th</div>
+                        <div class="label">Pengalaman</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════ ABOUT ═══════ -->
+    <section class="about-section py-5" style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-md-4">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 fade-up">
+                    <div class="about-img-wrap">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX65W908V7BOBH8s0bCJxt_otKLIFK8gHJrF85OWlEVWCZlYSPh9Dy8q0rEyhKm641p6FJ5VPkm2y8u3PM8Ud4mRKOK9i5RwcWiYCwXISv3PZZW6mrqABsU4EhD9rFwPwhq0GdRO4Q2IZCYrg-8bQTvQtbgnqFkdyBODUQtQzs5aoeI8PSSsgYmybGTz1MtocQ7Qy74KxEoK8cmC1p3Tm7FRCNXd2RHRaqCE51SCZ2RHQaFw8vny2oRPtHKkYtxB3nJ8d_2SlM4V_L"
+                            alt="Jeep Offroad">
+                        <div class="about-badge">
+                            <div class="big">10+</div>
+                            <div class="small">Tahun Pengalaman Menjelajah Batu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 fade-up">
+                    <span class="section-label">Tentang Kami</span>
+                    <h2 class="section-title mb-3">Mengapa Memilih<br />Offroad Batu <span
+                            style="color:var(--green-deep)">Profesional?</span></h2>
+                    <p class="text-muted mb-4" style="line-height:1.8; font-size:0.95rem;">
+                        Kami adalah penyedia layanan wisata petualangan Jeep Offroad terpercaya di Kota Batu. Dengan
+                        pengalaman bertahun-tahun, kami menjamin keamanan, kenyamanan, dan keseruan liburan Anda bersama
+                        kerabat maupun rekan kerja.
+                    </p>
+                    <div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="bi bi-truck"></i></div>
+                            <div>
+                                <div class="feature-title">Armada Terawat</div>
+                                <div class="feature-desc">Unit Jeep 4x4 selalu dalam kondisi prima dan rutin diservis
+                                    sebelum setiap trip.</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                            <div>
+                                <div class="feature-title">Driver Berpengalaman</div>
+                                <div class="feature-desc">Pemandu lokal profesional yang ramah dan ahli di setiap medan
+                                    offroad.</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="bi bi-map"></i></div>
+                            <div>
+                                <div class="feature-title">Rute Eksklusif</div>
+                                <div class="feature-desc">Jalur-jalur indah yang jarang dijamah wisatawan biasa dengan
+                                    pemandangan menakjubkan.</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="bi bi-tag"></i></div>
+                            <div>
+                                <div class="feature-title">Harga Terbaik</div>
+                                <div class="feature-desc">Penawaran paket kompetitif tanpa biaya tersembunyi, transparan
+                                    dari awal.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tentang.html" class="link-arrow mt-3">Pelajari Selengkapnya <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ SERVICES ═══════ -->
+    <section class="services-section py-5" id="services"
+        style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-md-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="section-label">Layanan Kami</span>
+                <h2 class="section-title mb-3">Pilihan Paket Wisata<br />&amp; <span
+                        style="color:var(--green-deep)">Offroad</span></h2>
+                <p class="text-muted mx-auto" style="max-width:520px; font-size:0.93rem;">
+                    Pilih paket yang sesuai dengan kebutuhan adrenalin Anda, mulai dari fun trip keluarga hingga
+                    adventure extreme.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-up">
+                    <div class="service-card h-100">
+                        <div class="service-icon"><i class="bi bi-compass"></i></div>
+                        <h5>Offroad Adventure</h5>
+                        <p>Jelajahi rute menantang di Coban Talun dan hutan pinus. Cocok untuk pencinta adrenalin yang
+                            ingin merasakan sensasi offroad sesungguhnya bersama driver berpengalaman.</p>
+                        <a href="#" class="link-arrow">Detail Paket <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up">
+                    <div class="service-card h-100">
+                        <div class="service-icon"><i class="bi bi-people-fill"></i></div>
+                        <h5>Fun Offroad Family</h5>
+                        <p>Liburan seru bersama keluarga dengan rute medium yang aman namun tetap menyenangkan. Wisata
+                            petik apel dan spot foto instagramable yang tak terlupakan.</p>
+                        <a href="#" class="link-arrow">Detail Paket <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up">
+                    <div class="service-card h-100">
+                        <div class="service-icon"><i class="bi bi-building"></i></div>
+                        <h5>Corporate Team Building</h5>
+                        <p>Paket khusus perusahaan untuk meningkatkan kerjasama tim. Gabungan fun offroad dengan games
+                            outbound yang efektif membangun karakter dan chemistry tim.</p>
+                        <a href="#" class="link-arrow">Detail Paket <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ STATS BAND ═══════ -->
+    <section class="stats-band">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-6 col-md-3 stat-item fade-up">
+                    <span class="stat-num">1000+</span>
+                    <div class="stat-lbl">Trip Sukses</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item fade-up">
+                    <span class="stat-num">50+</span>
+                    <div class="stat-lbl">Armada Jeep</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item fade-up">
+                    <span class="stat-num">100%</span>
+                    <div class="stat-lbl">Kepuasan Tamu</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item fade-up">
+                    <span class="stat-num">8 Th</span>
+                    <div class="stat-lbl">Pengalaman</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ BLOG ═══════ -->
+    <section class="blog-section py-5" style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-md-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-5 gap-3 fade-up">
+                <div>
+                    <span class="section-label">Artikel Terbaru</span>
+                    <h2 class="section-title mb-0">Tips &amp; Berita<br /><span
+                            style="color:var(--green-deep)">Offroad</span></h2>
+                </div>
+                <a href="blog.html" class="link-arrow" style="font-size:0.9rem;">Lihat Semua <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-up">
+                    <div class="blog-card h-100">
+                        <div class="img-wrap">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqxMOmz40UyZd_VFDhI2g4x3Z0IxaqXx4gB8SkqCPuteoseLKR6Ea11FGRvYzeHVIi3uwA1GmImb_GbsoSgrbyoMnRuKmi5Z_4ph9vT3QhJsm7AsLLqvH0DCKGqDAFHR-gWYMwVTUKpDc5G4HWHcRVbMPCYB7BD7VK4AduOlKwPPDKl_kRWD07tWIgdiTC_2rn6aRJ3mrxAIAzcrtgVyZQtv3QcUySJ3PjHRgarkCf0haiSk1Xt4wTcoNCfCvP6LhjUmyKlMGXk3gA"
+                                alt="Camping Tips">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="tag-badge">Tips Wisata</span>
+                            <h6>Persiapan Penting Sebelum Offroad di Batu Malang</h6>
+                            <p class="blog-meta"><i class="bi bi-calendar3 me-1"></i>12 Feb 2024 &nbsp;·&nbsp; <i
+                                    class="bi bi-person me-1"></i>Admin</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up">
+                    <div class="blog-card h-100">
+                        <div class="img-wrap">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuComBQ2ygzWGtN4kiScMbYHQNbxUHbRxCxp6o7JlFj8goIt7IVdarsHh8aboiJ_073K3LI6Lz-mEbLJTB6xNLjh9-urCIrbxXzgNTZFobjqdAGmLEDQNZfyl7CkhrNnAj5wk-y1xVBU_mHxxgmpqPLDchgq-uKrKA03-kRexbypZ7HuZKSVlKGei1ZvZkdjOA9a7oufWNczXhjC3NV3YWF-xi6yzn8aogprVpUWXJOJk3r328qUp7ic5SP02mm81z7qHcGVzfcCbONL"
+                                alt="Offroad View">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="tag-badge">Destinasi</span>
+                            <h6>5 Spot Foto Terbaik di Jalur Offroad Coban Talun</h6>
+                            <p class="blog-meta"><i class="bi bi-calendar3 me-1"></i>10 Feb 2024 &nbsp;·&nbsp; <i
+                                    class="bi bi-person me-1"></i>Admin</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up">
+                    <div class="blog-card h-100">
+                        <div class="img-wrap">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcbTBoqjGHnJpTgcRhE0AsD2S2Y5TAlIH9Ymmh2qLv4t1cBj1q9Airk0hh3O-Fig5HOl2Q9Gdc7hADVCE6V9UE330pUYWQPvk0wxekkdIDqJrSGM1gqMaqAF9nxaOH08QJcMTtgqb-W3tH7cS4u9VkuapWwxXSJNbGsSqI-7W_p1GkwUw59BCSYYfM-eOzzVcZsS-3EXpVtHlE1hv_AC4N4jp6VwivmvmR-TQ9oOY7KGgR1ahd_F7-2n2vOjMNMfYOw4Rpuj-Owyhi"
+                                alt="Team Building">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="tag-badge">Event</span>
+                            <h6>Manfaat Offroad untuk Kekompakan Tim Kantor</h6>
+                            <p class="blog-meta"><i class="bi bi-calendar3 me-1"></i>05 Feb 2024 &nbsp;·&nbsp; <i
+                                    class="bi bi-person me-1"></i>Admin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ CTA BAND ═══════ -->
+    <section class="cta-band py-5" style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-3 inner text-center">
+            <h2 class="mb-3">Siap Untuk <em
+                    style="font-style:normal;text-decoration:underline;text-decoration-color:var(--dark);">Offroad</em>?
+            </h2>
+            <p class="mb-4">Hubungi kami sekarang untuk penawaran spesial. Slot terbatas untuk akhir pekan!</p>
+            <a href="https://wa.me/62895639068080" class="btn-wa">
+                <i class="bi bi-whatsapp"></i> Chat WhatsApp Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand mb-3">Offroad<span>Batu</span></div>
+                    <p style="font-size:0.85rem; line-height:1.7;">Provider layanan wisata petualangan terpercaya di
+                        Batu Malang. Armada terbaik, driver profesional.</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Navigasi</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="#">Paket Wisata</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6>Layanan</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#">Offroad Adventure</a></li>
+                        <li><a href="#">Fun Offroad Family</a></li>
+                        <li><a href="#">Corporate Gathering</a></li>
+                        <li><a href="#">Sunrise Jeep Bromo</a></li>
+                        <li><a href="#">Wisata Edukasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Kontak</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-3" style="font-size:0.88rem;">
+                        <li class="d-flex gap-3"><i class="bi bi-geo-alt-fill text-warning mt-1"></i><span>Jl. Terusan
+                                Wisata No. 1, Batu, Malang, Jawa Timur</span></li>
+                        <li class="d-flex gap-3"><i
+                                class="bi bi-telephone-fill text-warning"></i><span>0895-6390-68080</span></li>
+                        <li class="d-flex gap-3"><i
+                                class="bi bi-envelope-fill text-warning"></i><span>info@offroadbatu.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <p class="text-center mb-0" style="font-size:0.8rem; opacity:0.45;">© 2026 Offroad Batu Malang Professional.
+                All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <button class="btn-floating floating-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            title="Back to Top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+        <a href="https://wa.me/62895639068080" class="btn-floating wa-float" target="_blank" title="Chat WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll fade-in
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // Floating buttons visibility
+        window.addEventListener('scroll', () => {
+            const topBtn = document.querySelector('.floating-top');
+            if (window.scrollY > 300) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>

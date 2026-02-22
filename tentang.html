@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami – Offroad Batu Professional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --green-deep: #0f4c2a;
+            --green-mid: #1a6e3e;
+            --green-light: #d6eedf;
+            --amber: #f5a623;
+            --amber-dark: #d4881a;
+            --dark: #0b1c12;
+            --surface: #f5f7f5;
+            --text: #1c2b21;
+            --muted: #6b7c70;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--surface);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(11, 28, 18, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.75rem 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: #fff !important;
+            letter-spacing: 1px;
+        }
+
+        .navbar-brand .accent {
+            color: var(--amber);
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.75) !important;
+            font-weight: 500;
+            font-size: 0.92rem;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--amber) !important;
+        }
+
+        .btn-cta-nav {
+            background: var(--amber);
+            color: var(--dark) !important;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            padding: 0.5rem 1.4rem !important;
+        }
+
+        .btn-cta-nav:hover {
+            background: var(--amber-dark);
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        /* HERO */
+        .page-hero {
+            position: relative;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            background: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXKKv3J_tUfduTT-EjbiufVo6axv5M6peSbvgggV6KFPz1KCTBNQ9FP0cryZHJ6aNoGzbVs055HSivO4wZ92GXAha5whZ83xWHta6LVGVVTY4juP4Eh6x0UjS6rzmlJ191YcnWUTgi1kBB-07-tlgi3i_r8xnqqHknsS86IXLPBl4iCy12xxFmMq2UQ8Re_bYIRsGNNzQii1CwaG6vj2trNiIek3SBsfI_FizDK_BQrCl4LiavGSM15tTpb_qHnS5-8nYktRYcD-5Q') center/cover no-repeat;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 28, 18, 0.9) 0%, rgba(15, 76, 42, 0.6) 100%);
+        }
+
+        .page-hero .inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb-item a,
+        .breadcrumb-item.active {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.88rem;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--amber);
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* SECTION LABELS */
+        .section-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--amber);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text);
+            line-height: 1.1;
+        }
+
+        /* STORY SECTION */
+        .story-section {
+            background: #fff;
+        }
+
+        .story-img {
+            border-radius: 1.25rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .story-img img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 1.25rem;
+        }
+
+        .story-badge {
+            position: absolute;
+            bottom: 2rem;
+            right: -1.5rem;
+            background: var(--amber);
+            color: var(--dark);
+            border-radius: 1rem;
+            padding: 1.25rem 1.75rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        .story-badge .num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .story-badge .desc {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.2rem;
+            max-width: 110px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .check-item i {
+            color: var(--green-deep);
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+
+        .check-item span {
+            font-size: 0.92rem;
+            color: var(--text);
+        }
+
+        /* VISION MISSION */
+        .vm-section {
+            background: var(--surface);
+        }
+
+        .vm-card {
+            background: #fff;
+            border-radius: 1.25rem;
+            padding: 2.5rem;
+            border: 1.5px solid #e8eeea;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+
+        .vm-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(15, 76, 42, 0.1);
+        }
+
+        .vm-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .vm-icon-amber {
+            background: rgba(245, 166, 35, 0.1);
+            color: var(--amber);
+        }
+
+        .vm-icon-green {
+            background: var(--green-light);
+            color: var(--green-deep);
+        }
+
+        .vm-card h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .vm-card p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* TEAM */
+        .team-section {
+            background: #fff;
+        }
+
+        .team-card {
+            border-radius: 1.25rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .team-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11, 28, 18, 0.95) 30%, transparent 70%);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .team-role {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 0.25rem;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .team-bio {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.4rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s;
+        }
+
+        .team-card:hover .team-bio {
+            max-height: 60px;
+        }
+
+        /* FLEET */
+        .fleet-section {
+            background: var(--surface);
+        }
+
+        .fleet-card {
+            background: #fff;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            border: 1.5px solid #e8eeea;
+            transition: all 0.3s;
+        }
+
+        .fleet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .fleet-card .img-wrap {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .fleet-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .fleet-card:hover .img-wrap img {
+            transform: scale(1.06);
+        }
+
+        .fleet-card-body {
+            padding: 1.5rem;
+        }
+
+        .fleet-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+        }
+
+        .badge-fav {
+            background: var(--green-light);
+            color: var(--green-deep);
+        }
+
+        .badge-prem {
+            background: rgba(245, 166, 35, 0.15);
+            color: var(--amber-dark);
+        }
+
+        .badge-ext {
+            background: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+        }
+
+        .fleet-card h5 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0.75rem 0 0.5rem;
+        }
+
+        .fleet-card p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .fleet-meta {
+            display: flex;
+            gap: 1.25rem;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            border-top: 1px solid #f0f3f1;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .fleet-meta span i {
+            margin-right: 0.3rem;
+        }
+
+        /* CTA */
+        .cta-band {
+            background: var(--amber);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-band::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000' fill-opacity='0.05'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cta-band .inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-band h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-transform: uppercase;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .cta-band p {
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 1.05rem;
+        }
+
+        .btn-wa {
+            background: var(--dark);
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            padding: 0.9rem 2.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.25s;
+        }
+
+        .btn-wa:hover {
+            background: var(--green-deep);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        footer .footer-brand {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        footer .footer-brand span {
+            color: var(--amber);
+        }
+
+        footer h6 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 1.25rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--amber);
+        }
+
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-btn:hover {
+            background: var(--amber);
+            border-color: var(--amber);
+            color: var(--dark);
+        }
+
+        /* ─── FLOATING BUTTONS ──────────────────────── */
+        .floating-btns {
+            position: fixed;
+            bottom: 1.75rem;
+            right: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1050;
+        }
+
+        .btn-floating {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-floating:hover {
+            transform: scale(1.1) translateY(-5px);
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-top {
+            background: var(--green-deep);
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .floating-top.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .wa-float {
+            background: #25D366;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .wa-float:hover {
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media (max-width:767px) {
+            .story-badge {
+                right: 1rem;
+            }
+
+            .story-img img {
+                height: 320px;
+            }
+
+            .floating-btns {
+                bottom: 1.25rem;
+                right: 1.25rem;
+                gap: 0.75rem;
+            }
+
+            .btn-floating {
+                width: 48px;
+                height: 48px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-triangle-fill me-1" style="font-size:1.1rem;color:var(--amber)"></i>
+                Offroad<span class="accent">Batu</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-2 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Paket Offroad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item ms-lg-3"><a class="nav-link btn-cta-nav"
+                            href="https://wa.me/62895639068080">HUBUNGI KAMI</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+        <div class="container inner">
+            <div class="py-5 mt-5">
+                <h1>Tentang Kami</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-fill me-1"></i>Home</a>
+                        </li>
+                        <li class="breadcrumb-item active">Tentang Kami</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- STORY -->
+    <section class="story-section py-5" style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-md-4">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 fade-up">
+                    <div class="story-img">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXHz5erAfFeP5vnmUA7wP-Om2hne78yjFwbQAmE2dgeFY03AogJgyObR7_3bHgX8ovtvIk6dwaBXMNH8NYWXh8oc9zqqY7l732hqAyYaOoIgFT3-G_vHyRicCcpVBVmxvUJMhjhUdOVcuZKu-_s72pcdnX1iSCiKm7po73ZRfOMt4NdyX7BJu6iGy_NNkN0tj0EUYt8-gUCa6885u2OZAdXoNIhzsjOx09GdfVI1YtawZGmEgutck02IIipIU3ec0WWKQkyK2rVB4f"
+                            alt="Tim Offroad Batu">
+                        <div class="story-badge">
+                            <div class="num">10+</div>
+                            <div class="desc">Tahun Menjelajah Jalur Batu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 fade-up">
+                    <span class="section-label">Cerita Kami</span>
+                    <h2 class="section-title mb-3">Menaklukan Medan,<br /><span
+                            style="color:var(--green-deep)">Menciptakan Kenangan</span></h2>
+                    <p style="font-size:0.95rem; line-height:1.8; color:var(--muted);">
+                        Berawal dari sekumpulan pecinta alam dan otomotif di tahun 2012, <strong
+                            style="color:var(--text);">Offroad Batu Professional</strong> tumbuh menjadi penyedia
+                        layanan wisata petualangan terkemuka di kota Batu, Malang. Kami percaya bahwa keindahan alam
+                        Batu tidak hanya untuk dilihat dari kejauhan, tetapi untuk dirasakan melalui setiap guncangan
+                        adrenalin di jalur offroad.
+                    </p>
+                    <p style="font-size:0.95rem; line-height:1.8; color:var(--muted); margin-bottom:1.75rem;">
+                        Kami mengkhususkan diri dalam menyediakan pengalaman Jeep 4x4 yang aman namun menantang, membawa
+                        Anda melintasi hutan pinus, sungai berbatu, dan jalur lumpur yang memacu jantung, dengan latar
+                        belakang Gunung Panderman yang megah.
+                    </p>
+                    <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Armada Jeep terawat dengan
+                            standar keamanan tinggi dan servis berkala.</span></div>
+                    <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Driver profesional dan
+                            berlisensi wisata resmi pemerintah daerah.</span></div>
+                    <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Jalur eksklusif dengan
+                            pemandangan terbaik yang tak terlupakan.</span></div>
+                    <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Asuransi perjalanan dan
+                            perlengkapan keselamatan lengkap.</span></div>
+                    <a href="#" class="d-inline-flex align-items-center gap-2 mt-3 fw-bold text-decoration-none"
+                        style="color:var(--green-deep);">
+                        Lihat Galeri Perjalanan <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section class="vm-section py-5" style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-md-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="section-label">Komitmen Kami</span>
+                <h2 class="section-title">Visi &amp; <span style="color:var(--green-deep)">Misi</span></h2>
+                <p class="text-muted mx-auto mt-2" style="max-width:500px; font-size:0.92rem;">Standar pelayanan terbaik
+                    dalam industri pariwisata petualangan Jawa Timur.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 fade-up">
+                    <div class="vm-card">
+                        <div class="vm-icon vm-icon-amber"><i class="bi bi-eye-fill"></i></div>
+                        <h3>Visi Kami</h3>
+                        <p>Menjadi operator wisata offroad nomor satu di Jawa Timur yang dikenal karena integritas,
+                            keamanan, dan kemampuan kami menyajikan keindahan alam Indonesia melalui pengalaman
+                            petualangan yang tak terlupakan bagi setiap tamu.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-up">
+                    <div class="vm-card">
+                        <div class="vm-icon vm-icon-green"><i class="bi bi-flag-fill"></i></div>
+                        <h3>Misi Kami</h3>
+                        <p>Memberikan pelayanan prima dengan mengutamakan <em>"Safety First"</em>, memberdayakan
+                            komunitas lokal sebagai bagian dari tim, serta menjaga kelestarian lingkungan alam Batu
+                            melalui praktik wisata yang bertanggung jawab dan berkelanjutan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team-section py-5" style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-md-4">
+            <div class="text-center mb-5 fade-up">
+                <span class="section-label">Profesional &amp; Berpengalaman</span>
+                <h2 class="section-title">Tim <span style="color:var(--green-deep)">Lapangan</span> Kami</h2>
+                <p class="text-muted mx-auto mt-2" style="max-width:480px; font-size:0.92rem;">Para driver dan pemandu
+                    yang siap menemani petualangan Anda dengan aman dan penuh semangat.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-lg-3 fade-up">
+                    <div class="team-card">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFGWH7RuGLoSSnHvE2D8Njf9Aap1ntKCpHCr9v0MacWAqYQJLBEus__UT7W88oTM4VOzpPrhf8bMFBRskJIO3rquo2GYEQL3xT0uRCZSk5tnTLXvQu6b6NEx1rK_XItovQFXnfQcNX5P7rG1dPHXElJZhzv0mSx4vk1OW_HQvNgxnrzJS-eHFJ8kU8g0Lz2ULzaRVk5TjHj_gzPi0jWkfM_lO8FeDiy7aZ6cOtQ_i2STt17fQuzR699kGaiyA8haXhkc2RCOpLdRG"
+                            alt="Budi Santoso">
+                        <div class="team-overlay">
+                            <div class="team-role">Senior Driver & Mechanic</div>
+                            <div class="team-name">Budi Santoso</div>
+                            <div class="team-bio">15 Tahun pengalaman menaklukan jalur Coban Rais dan sekitarnya.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 fade-up">
+                    <div class="team-card">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpAvmXhdBUsqvLaqqEhcWldI6QJmVtzgdqxguk6Xj56Dw-BWBg_AA_gsOZzJRKvETw5UFaTfB4MZ5o_T-XZVex2ANiwn62bl7iUkoLtdaHSO8hsnaWaLRkrn2jgB-rWV12BsLeB7ze-oZ8APvFNvGGIXHcuMlPbt5JKPasz-jgOB3Pw8XjWZrH_yuYprn9iOPqnzZc2WlJoe7QFSwy1pEdqca5Gi_hmOMi_s8UtR1Q0hkOoGITIsanyGbRRMVgaz6v59529Y2msJUj"
+                            alt="Arief Hidayat">
+                        <div class="team-overlay">
+                            <div class="team-role">Tour Leader</div>
+                            <div class="team-name">Arief Hidayat</div>
+                            <div class="team-bio">Ahli navigasi dan cerita sejarah lokal Batu Malang.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 fade-up">
+                    <div class="team-card">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuArj78WRW_3-VsMlXA-8TbyC_tzQrcD0LO0O6WxfYKdOp-fKDGkY9HhiAPcWSfah1qnf88IWdiWI33wmPOVIT6EJU7fDM1FF0hKRlJHsurZWjDNfU7SmzvkDlJrfdh5oqHQV2llG_cYR5EdAI3mnbH5Xra8wM7RF9TMyai_19KHWVcll6ONFXnHsvOnhWeXmW-PsJmNQVD_z9odTAvMvgfjrGGObF7eU4m5oQl7E29XNpYFAqSP5D4ZASOeBSDlwL8ncVzfnNORgR9k"
+                            alt="Dodi Prasetyo">
+                        <div class="team-overlay">
+                            <div class="team-role">Safety Officer</div>
+                            <div class="team-name">Dodi Prasetyo</div>
+                            <div class="team-bio">Bersertifikat BNSP untuk keselamatan wisata alam.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 fade-up">
+                    <div class="team-card">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRLUGx8-1Y6kdZizRHoAqMmTK7tttrAisks2oF6byxz5WUhKrxDLyOBhQuIKktr8Wz6O6yvLIHcCeIFfOn24E_HlQNwc02oY3hBsj6agCLJrcAwyxfCvJb1QIWoGYImkuup5HQo3vOW0GroapgWIW99qnA-eaV7syzm46d2aF-Ew_w_6-tpoFwRvyGZdgiEUgV4Bj6LQ-UbPxX5s1EtoKeVTY9nRowauzAg37KEDLfCUO_j24BoEBsL-ogj2J2ElDQ7jrqG0VvMD8k"
+                            alt="Rian Kusuma">
+                        <div class="team-overlay">
+                            <div class="team-role">4x4 Instructor</div>
+                            <div class="team-name">Rian Kusuma</div>
+                            <div class="team-bio">Spesialis teknik mengemudi di jalur ekstrim dan medan berat.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLEET -->
+    <section class="fleet-section py-5" style="padding-top:5rem !important; padding-bottom:5rem !important;">
+        <div class="container py-md-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-5 gap-3 fade-up">
+                <div>
+                    <span class="section-label">Kendaraan Offroad</span>
+                    <h2 class="section-title mb-0">Armada <span style="color:var(--green-deep)">Tangguh</span> Kami</h2>
+                </div>
+                <a href="#" class="d-inline-flex align-items-center gap-2 fw-bold text-decoration-none"
+                    style="color:var(--green-deep); font-size:0.9rem;">
+                    Lihat Semua Paket <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 fade-up">
+                    <div class="fleet-card h-100">
+                        <div class="img-wrap">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEdhHLWmLR3a7pnQCYR3V70md47cJ0znkurHtTcKqgl9AeuppA3CTEe0Z96y9ohPNRiumt-DOwl34vh83f2_pbHwpqFGC2z6AMa3t61C9hUbLb9IndRsIShl7bmMZA0nEqgCArp9Pf-BmeIKiegdcD19yc6SEMc2s5Oqw14JAZroT4MF-2w1-XM_8MlDSOgjimqfheCtNNiwBk-dkLeeMHAcvXclSdKg-MvntRhWdOyBUHOkYTuMJkqdEnNtgbNfIUgduqQtsgeqo"
+                                alt="Jeep Willys">
+                        </div>
+                        <div class="fleet-card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5>Jeep Willys Classic</h5>
+                                <span class="fleet-badge badge-fav">Favorite</span>
+                            </div>
+                            <p>Legenda offroad dengan atap terbuka. Sempurna untuk menikmati udara segar pegunungan dan
+                                foto vintage yang estetik.</p>
+                            <div class="fleet-meta">
+                                <span><i class="bi bi-people-fill"></i>3–4 Orang</span>
+                                <span><i class="bi bi-gear-fill"></i>4x4 WD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up">
+                    <div class="fleet-card h-100">
+                        <div class="img-wrap">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClm90evwbZ5QEz3m7_bYNq0SS-nwOH_sJpDdKulMyrVUBxHzFUup6CzvcOn_IvIo365cVP1_vAz9TXwPq1BAKN3pPr3k1udWyZMDrVJ27N4JbnVY0syWe5cRbltDwC8xzpL5775NE67ZQu3mwJtL0KPGI5ZRCZfGavjZt_utr8BjrQ4JQJ24JV8Xt2IiyeWxRoGjscFyM76RXzTuYXHdYp2YVEpIUFNpRIEwU3pSvk_-bTCfIKIMyk6i2DkwbwG5kBdOzmskVjiBoa"
+                                alt="Land Cruiser">
+                        </div>
+                        <div class="fleet-card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5>Land Cruiser Hardtop</h5>
+                                <span class="fleet-badge badge-prem">Premium</span>
+                            </div>
+                            <p>Kenyamanan dan ketangguhan dalam satu paket. Suspensi yang lebih lembut cocok untuk
+                                keluarga dan rute perjalanan panjang.</p>
+                            <div class="fleet-meta">
+                                <span><i class="bi bi-people-fill"></i>5–6 Orang</span>
+                                <span><i class="bi bi-wind"></i>AC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-up">
+                    <div class="fleet-card h-100">
+                        <div class="img-wrap">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRvgZnEG1Z8z1F2n3_x0pPxuB82HG7TKhNXyDwlBRCQupPcPhn82-o6nfmuGMddO_MTsWwxtL58vzfe8YvJyGEHnFpRp031FARoFTk0IUMBrr0GlwzTf2JP-rasUagSLX_o45wzAxc8hGSCWB7YfuLpGMw_CH0REVkHTTEvPx4qjZiZ6WPn4T5Cm6p1G7xM9EyohqrbhYWMwVMED94K75j9Bwn-ww9aW438B4X5o5q2hiR8g-E9RC0GalvGN6GpOlVEZh_vZNGD7hX"
+                                alt="Modified Jimny">
+                        </div>
+                        <div class="fleet-card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5>Modified Jimny 4x4</h5>
+                                <span class="fleet-badge badge-ext">Extreme</span>
+                            </div>
+                            <p>Lincah dan agresif. Dirancang khusus untuk jalur sempit dan medan lumpur ekstrim. Untuk
+                                para pencari adrenalin sejati.</p>
+                            <div class="fleet-meta">
+                                <span><i class="bi bi-people-fill"></i>2–3 Orang</span>
+                                <span><i class="bi bi-truck"></i>Mud Tyres</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band py-5" style="padding-top:4.5rem !important; padding-bottom:4.5rem !important;">
+        <div class="container py-3 inner text-center">
+            <h2 class="mb-3">Siap Untuk <em style="font-style:normal;text-decoration:underline;">Petualangan</em>?</h2>
+            <p class="mb-4">Hubungi kami untuk penawaran spesial paket offroad terbaik di Batu Malang.</p>
+            <a href="https://wa.me/62895639068080" class="btn-wa"><i class="bi bi-whatsapp"></i> Chat WhatsApp
+                Sekarang</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand mb-3">Offroad<span>Batu</span></div>
+                    <p style="font-size:0.85rem; line-height:1.7;">Provider layanan wisata offroad dan outbound
+                        terpercaya di Batu Malang.</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Navigasi</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="#">Paket Offroad</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6>Layanan</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#">Corporate Gathering</a></li>
+                        <li><a href="#">Family Offroad Trip</a></li>
+                        <li><a href="#">Rafting & Paintball</a></li>
+                        <li><a href="#">Sunrise Trip Bromo</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Kontak</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-3" style="font-size:0.88rem;">
+                        <li class="d-flex gap-3"><i class="bi bi-geo-alt-fill text-warning mt-1"></i><span>Jl. Terusan
+                                Wisata No. 1, Batu, Malang, Jawa Timur</span></li>
+                        <li class="d-flex gap-3"><i
+                                class="bi bi-telephone-fill text-warning"></i><span>0895-6390-68080</span></li>
+                        <li class="d-flex gap-3"><i
+                                class="bi bi-envelope-fill text-warning"></i><span>info@offroadbatu.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <p class="text-center mb-0" style="font-size:0.8rem; opacity:0.45;">© 2026 Offroad Batu Professional. All
+                Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <button class="btn-floating floating-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            title="Back to Top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+        <a href="https://wa.me/62895639068080" class="btn-floating wa-float" target="_blank" title="Chat WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // Floating buttons visibility
+        window.addEventListener('scroll', () => {
+            const topBtn = document.querySelector('.floating-top');
+            if (window.scrollY > 300) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
