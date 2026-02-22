@@ -35,6 +35,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="asset/favicon-16x16.png">
     <link rel="shortcut icon" href="asset/favicon.ico">
 
+    <!-- PERFORMANCE OPTIMIZATION -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://lh3.googleusercontent.com">
+
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image"
+        href="https://lh3.googleusercontent.com/aida-public/AB6AXuD3uaWv5uFou5pSODzaFtmAtMv9whuS1rgyq1N51wkgup6mj2zwVJSJb6hntZvmpXCsywoaoomPo3Tw30xJgwEv_kZxMA_U5wDeQ18d7nZ6XrzlYssB6ZcvzRcZs7Bdy2qnzJPJM3LbgvX9QkOuhU91cNSH-ZGXH6qhKhJpI4Q6NGHOhCl_f8C-Pkc7cIMjds90iaA-1KHjlWyr5sc1lLfoojtz1Tu1XOik48ehpzVis_gHkijJdKMHCkrRl9S6V4vg8qsbmZLflutj"
+        fetchpriority="high">
+
     <!-- JSON-LD SCHEMA -->
     <script type="application/ld+json">
     {
@@ -54,11 +65,25 @@
     }
     </script>
 
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </noscript>
+
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
     <style>
         :root {
             --green-deep: #0f4c2a;
@@ -839,8 +864,8 @@
                     petualangan offroad di Batu Malang. Cetak atau simpan di HP sebagai panduan!</p>
 
                 <img loading="lazy"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3uaWv5uFou5pSODzaFtmAtMv9whuS1rgyq1N51wkgup6mj2zwVJSJb6hntZvmpXCsywoaoomPo3Tw30xJgwEv_kZxMA_U5wDeQ18d7nZ6XrzlYssB6ZcvzRcZs7Bdy2qnzJPJM3LbgvX9QkOuhU91cNSH-ZGXH6qhKhJpI4Q6NGHOhCl_f8C-Pkc7cIMjds90iaA-1KHjlWyr5sc1lLfoojtz1Tu1XOik48ehpzVis_gHkijJdKMHCkrRl9S6V4vg8qsbmZLflutj"
-                    alt="Persiapan offroad" />
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3uaWv5uFou5pSODzaFtmAtMv9whuS1rgyq1N51wkgup6mj2zwVJSJb6hntZvmpXCsywoaoomPo3Tw30xJgwEv_kZxMA_U5wDeQ18d7nZ6XrzlYssB6ZcvzRcZs7Bdy2qnzJPJM3LbgvX9QkOuhU91cNSH-ZGXH6qhKhJpI4Q6NGHOhCl_f8C-Pkc7cIMjds90iaA-1KHjlWyr5sc1lLfoojtz1Tu1XOik48ehpzVis_gHkijJdKMHCkrRl9S6V4vg8qsbmZLflutj=w800-h480-c"
+                    alt="Persiapan offroad" width="800" height="480" />
 
                 <h2 id="kenapa">Kenapa Persiapan Itu Penting?</h2>
                 <p>Medan offroad di Batu Malang sangat bervariasi — mulai dari jalur berbatu, lumpur tebal, tanjakan
@@ -1011,8 +1036,8 @@
                 <!-- Author Bio -->
                 <div class="author-bio">
                     <img loading="lazy"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3uaWv5uFou5pSODzaFtmAtMv9whuS1rgyq1N51wkgup6mj2zwVJSJb6hntZvmpXCsywoaoomPo3Tw30xJgwEv_kZxMA_U5wDeQ18d7nZ6XrzlYssB6ZcvzRcZs7Bdy2qnzJPJM3LbgvX9QkOuhU91cNSH-ZGXH6qhKhJpI4Q6NGHOhCl_f8C-Pkc7cIMjds90iaA-1KHjlWyr5sc1lLfoojtz1Tu1XOik48ehpzVis_gHkijJdKMHCkrRl9S6V4vg8qsbmZLflutj"
-                        alt="Tim Offroad Batu" />
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3uaWv5uFou5pSODzaFtmAtMv9whuS1rgyq1N51wkgup6mj2zwVJSJb6hntZvmpXCsywoaoomPo3Tw30xJgwEv_kZxMA_U5wDeQ18d7nZ6XrzlYssB6ZcvzRcZs7Bdy2qnzJPJM3LbgvX9QkOuhU91cNSH-ZGXH6qhKhJpI4Q6NGHOhCl_f8C-Pkc7cIMjds90iaA-1KHjlWyr5sc1lLfoojtz1Tu1XOik48ehpzVis_gHkijJdKMHCkrRl9S6V4vg8qsbmZLflutj=w80-h80-c"
+                        alt="Tim Offroad Batu" width="80" height="80" />
                     <h5>Tim Offroad Batu</h5>
                     <p>Provider layanan wisata petualangan terpercaya di Batu Malang sejak 2015. Armada terbaik, driver
                         profesional, dan pengalaman tak terlupakan.</p>
@@ -1029,8 +1054,8 @@
                         <div class="related-card">
                             <div class="img-wrap">
                                 <img loading="lazy"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmHfDjOhl39p6Vj3klnmB0GX4fRIWS_rCJ0JAWZzhxJizUR4fL7MkckQEtgziK5UNTQQk6hDMqyKxh4UFcLDenpvtqAYJw3OiKckP_QvVgebVgTnjcyTIAO8wmSCjoNzvSi3t11mlgrMnoP5jASXckDw8OmI88kPOGk30XJAZKUjgPZr-vLTrrvkQoxz-5m5qMTGPS_6bmb6xP219JVLAyy2uELrxBe0UHpDYAEE7iE58J82Xd8G7kWI-pb5kKq0bkgfEqvNBekocO"
-                                    alt="5 Rute Offroad" />
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmHfDjOhl39p6Vj3klnmB0GX4fRIWS_rCJ0JAWZzhxJizUR4fL7MkckQEtgziK5UNTQQk6hDMqyKxh4UFcLDenpvtqAYJw3OiKckP_QvVgebVgTnjcyTIAO8wmSCjoNzvSi3t11mlgrMnoP5jASXckDw8OmI88kPOGk30XJAZKUjgPZr-vLTrrvkQoxz-5m5qMTGPS_6bmb6xP219JVLAyy2uELrxBe0UHpDYAEE7iE58J82Xd8G7kWI-pb5kKq0bkgfEqvNBekocO=w450-h180-c"
+                                    alt="5 Rute Offroad" width="450" height="180" />
                             </div>
                             <div class="related-card-body">
                                 <span class="tag-badge tag-amber">Rute Populer</span>
@@ -1043,8 +1068,8 @@
                         <div class="related-card">
                             <div class="img-wrap">
                                 <img loading="lazy"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqflXEouiCHW9CFoWviICRuc5ja7TAcBJ5hRvjmsbEUtptB3ejeFYn8WVN5USUW5qXmv7lUJ0ZPmImFO-2rt4RuUq2wEM4IRSP9iEHaI2CAxjvxwQog8f43gM8069FR3vIC4qXXgqr75O3I03T_wY8plOhhrf9qCY9IFgZjm3I6i-r5IZ0KaTpwntTyPCh69OW_AuZjKDveaV634QDdEbRwqIjhoqqALS8aWcdqkcTSZf4yAetV12eUuQhv0houxzW6z8e6fnDLwmG"
-                                    alt="Maintenance Jeep" />
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqflXEouiCHW9CFoWviICRuc5ja7TAcBJ5hRvjmsbEUtptB3ejeFYn8WVN5USUW5qXmv7lUJ0ZPmImFO-2rt4RuUq2wEM4IRSP9iEHaI2CAxjvxwQog8f43gM8069FR3vIC4qXXgqr75O3I03T_wY8plOhhrf9qCY9IFgZjm3I6i-r5IZ0KaTpwntTyPCh69OW_AuZjKDveaV634QDdEbRwqIjhoqqALS8aWcdqkcTSZf4yAetV12eUuQhv0houxzW6z8e6fnDLwmG=w450-h180-c"
+                                    alt="Maintenance Jeep" width="450" height="180" />
                             </div>
                             <div class="related-card-body">
                                 <span class="tag-badge tag-blue">Maintenance</span>
@@ -1057,8 +1082,8 @@
                         <div class="related-card">
                             <div class="img-wrap">
                                 <img loading="lazy"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4eJ_wbqlzOZ0p0w_-PuD9LVa4mkI5-A7mc3i-115lE6MSQhEaruz3JjWslzGSHEQzuNXoex-SP1h9LJVijC0e_OpUmziFC_1T881VOaQndG2NtKLVLeoXQSlVKcK1XOAPYKEjk0XvANX4YPfY83lsgtIGYx6bK4VUL_ndCT5RMhXnTcdyzBwjna7rZvweVRMUV7CTbsUeoSvLR3ISuZidCZNAx12olvQrYAZMOmGkvu2dyeFylOh6RkPP1ZWaOJTcaYbonP-DXLeL"
-                                    alt="Masakan Overland" />
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4eJ_wbqlzOZ0p0w_-PuD9LVa4mkI5-A7mc3i-115lE6MSQhEaruz3JjWslzGSHEQzuNXoex-SP1h9LJVijC0e_OpUmziFC_1T881VOaQndG2NtKLVLeoXQSlVKcK1XOAPYKEjk0XvANX4YPfY83lsgtIGYx6bK4VUL_ndCT5RMhXnTcdyzBwjna7rZvweVRMUV7CTbsUeoSvLR3ISuZidCZNAx12olvQrYAZMOmGkvu2dyeFylOh6RkPP1ZWaOJTcaYbonP-DXLeL=w450-h180-c"
+                                    alt="Masakan Overland" width="450" height="180" />
                             </div>
                             <div class="related-card-body">
                                 <span class="tag-badge tag-green">Tips Offroad</span>

@@ -33,6 +33,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="asset/favicon-16x16.png">
     <link rel="shortcut icon" href="asset/favicon.ico">
 
+    <!-- PERFORMANCE OPTIMIZATION -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://lh3.googleusercontent.com">
+
+    <!-- Preload LCP Image -->
+    <link rel="preload" as="image"
+        href="https://lh3.googleusercontent.com/aida-public/AB6AXuCXKKv3J_tUfduTT-EjbiufVo6axv5M6peSbvgggV6KFPz1KCTBNQ9FP0cryZHJ6aNoGzbVs055HSivO4wZ92GXAha5whZ83xWHta6LVGVVTY4juP4Eh6x0UjS6rzmlJ191YcnWUTgi1kBB-07-tlgi3i_r8xnqqHknsS86IXLPBl4iCy12xxFmMq2UQ8Re_bYIRsGNNzQii1CwaG6vj2trNiIek3SBsfI_FizDK_BQrCl4LiavGSM15tTpb_qHnS5-8nYktRYcD-5Q"
+        fetchpriority="high">
+
     <!-- JSON-LD SCHEMA -->
     <script type="application/ld+json">
     {
@@ -48,11 +59,25 @@
     }
     </script>
 
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </noscript>
+
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
     <style>
         :root {
             --green-deep: #0f4c2a;
@@ -716,8 +741,8 @@
                 <div class="col-lg-5 fade-up">
                     <div class="story-img">
                         <img loading="lazy"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXHz5erAfFeP5vnmUA7wP-Om2hne78yjFwbQAmE2dgeFY03AogJgyObR7_3bHgX8ovtvIk6dwaBXMNH8NYWXh8oc9zqqY7l732hqAyYaOoIgFT3-G_vHyRicCcpVBVmxvUJMhjhUdOVcuZKu-_s72pcdnX1iSCiKm7po73ZRfOMt4NdyX7BJu6iGy_NNkN0tj0EUYt8-gUCa6885u2OZAdXoNIhzsjOx09GdfVI1YtawZGmEgutck02IIipIU3ec0WWKQkyK2rVB4f"
-                            alt="Tim Offroad Batu">
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXHz5erAfFeP5vnmUA7wP-Om2hne78yjFwbQAmE2dgeFY03AogJgyObR7_3bHgX8ovtvIk6dwaBXMNH8NYWXh8oc9zqqY7l732hqAyYaOoIgFT3-G_vHyRicCcpVBVmxvUJMhjhUdOVcuZKu-_s72pcdnX1iSCiKm7po73ZRfOMt4NdyX7BJu6iGy_NNkN0tj0EUYt8-gUCa6885u2OZAdXoNIhzsjOx09GdfVI1YtawZGmEgutck02IIipIU3ec0WWKQkyK2rVB4f=w600-h480-c"
+                            alt="Tim Offroad Batu" width="600" height="480">
                         <div class="story-badge">
                             <div class="num">10+</div>
                             <div class="desc">Tahun Menjelajah Jalur Batu</div>
@@ -802,8 +827,8 @@
                 <div class="col-6 col-lg-3 fade-up">
                     <div class="team-card">
                         <img loading="lazy"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFGWH7RuGLoSSnHvE2D8Njf9Aap1ntKCpHCr9v0MacWAqYQJLBEus__UT7W88oTM4VOzpPrhf8bMFBRskJIO3rquo2GYEQL3xT0uRCZSk5tnTLXvQu6b6NEx1rK_XItovQFXnfQcNX5P7rG1dPHXElJZhzv0mSx4vk1OW_HQvNgxnrzJS-eHFJ8kU8g0Lz2ULzaRVk5TjHj_gzPi0jWkfM_lO8FeDiy7aZ6cOtQ_i2STt17fQuzR699kGaiyA8haXhkc2RCOpLdRG"
-                            alt="Budi Santoso">
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFGWH7RuGLoSSnHvE2D8Njf9Aap1ntKCpHCr9v0MacWAqYQJLBEus__UT7W88oTM4VOzpPrhf8bMFBRskJIO3rquo2GYEQL3xT0uRCZSk5tnTLXvQu6b6NEx1rK_XItovQFXnfQcNX5P7rG1dPHXElJZhzv0mSx4vk1OW_HQvNgxnrzJS-eHFJ8kU8g0Lz2ULzaRVk5TjHj_gzPi0jWkfM_lO8FeDiy7aZ6cOtQ_i2STt17fQuzR699kGaiyA8haXhkc2RCOpLdRG=w400-h340-c"
+                            alt="Budi Santoso" width="400" height="340">
                         <div class="team-overlay">
                             <div class="team-role">Senior Driver & Mechanic</div>
                             <div class="team-name">Budi Santoso</div>
@@ -815,8 +840,8 @@
                 <div class="col-6 col-lg-3 fade-up">
                     <div class="team-card">
                         <img loading="lazy"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpAvmXhdBUsqvLaqqEhcWldI6QJmVtzgdqxguk6Xj56Dw-BWBg_AA_gsOZzJRKvETw5UFaTfB4MZ5o_T-XZVex2ANiwn62bl7iUkoLtdaHSO8hsnaWaLRkrn2jgB-rWV12BsLeB7ze-oZ8APvFNvGGIXHcuMlPbt5JKPasz-jgOB3Pw8XjWZrH_yuYprn9iOPqnzZc2WlJoe7QFSwy1pEdqca5Gi_hmOMi_s8UtR1Q0hkOoGITIsanyGbRRMVgaz6v59529Y2msJUj"
-                            alt="Arief Hidayat">
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpAvmXhdBUsqvLaqqEhcWldI6QJmVtzgdqxguk6Xj56Dw-BWBg_AA_gsOZzJRKvETw5UFaTfB4MZ5o_T-XZVex2ANiwn62bl7iUkoLtdaHSO8hsnaWaLRkrn2jgB-rWV12BsLeB7ze-oZ8APvFNvGGIXHcuMlPbt5JKPasz-jgOB3Pw8XjWZrH_yuYprn9iOPqnzZc2WlJoe7QFSwy1pEdqca5Gi_hmOMi_s8UtR1Q0hkOoGITIsanyGbRRMVgaz6v59529Y2msJUj=w400-h340-c"
+                            alt="Arief Hidayat" width="400" height="340">
                         <div class="team-overlay">
                             <div class="team-role">Tour Leader</div>
                             <div class="team-name">Arief Hidayat</div>
@@ -827,8 +852,8 @@
                 <div class="col-6 col-lg-3 fade-up">
                     <div class="team-card">
                         <img loading="lazy"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuArj78WRW_3-VsMlXA-8TbyC_tzQrcD0LO0O6WxfYKdOp-fKDGkY9HhiAPcWSfah1qnf88IWdiWI33wmPOVIT6EJU7fDM1FF0hKRlJHsurZWjDNfU7SmzvkDlJrfdh5oqHQV2llG_cYR5EdAI3mnbH5Xra8wM7RF9TMyai_19KHWVcll6ONFXnHsvOnhWeXmW-PsJmNQVD_z9odTAvMvgfjrGGObF7eU4m5oQl7E29XNpYFAqSP5D4ZASOeBSDlwL8ncVzfnNORgR9k"
-                            alt="Dodi Prasetyo">
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuArj78WRW_3-VsMlXA-8TbyC_tzQrcD0LO0O6WxfYKdOp-fKDGkY9HhiAPcWSfah1qnf88IWdiWI33wmPOVIT6EJU7fDM1FF0hKRlJHsurZWjDNfU7SmzvkDlJrfdh5oqHQV2llG_cYR5EdAI3mnbH5Xra8wM7RF9TMyai_19KHWVcll6ONFXnHsvOnhWeXmW-PsJmNQVD_z9odTAvMvgfjrGGObF7eU4m5oQl7E29XNpYFAqSP5D4ZASOeBSDlwL8ncVzfnNORgR9k=w400-h340-c"
+                            alt="Dodi Prasetyo" width="400" height="340">
                         <div class="team-overlay">
                             <div class="team-role">Safety Officer</div>
                             <div class="team-name">Dodi Prasetyo</div>
@@ -838,14 +863,14 @@
                 </div>
                 <div class="col-6 col-lg-3 fade-up">
                     <div class="team-card">
-                        <loading="lazy"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRLUGx8-1Y6kdZizRHoAqMmTK7tttrAisks2oF6byxz5WUhKrxDLyOBhQuIKktr8Wz6O6yvLIHcCeIFfOn24E_HlQNwc02oY3hBsj6agCLJrcAwyxfCvJb1QIWoGYImkuup5HQo3vOW0GroapgWIW99qnA-eaV7syzm46d2aF-Ew_w_6-tpoFwRvyGZdgiEUgV4Bj6LQ-UbPxX5s1EtoKeVTY9nRowauzAg37KEDLfCUO_j24BoEBsL-ogj2J2ElDQ7jrqG0VvMD8k"
-                            alt="Rian Kusuma">
-                            <div class="team-overlay">
-                                <div class="team-role">4x4 Instructor</div>
-                                <div class="team-name">Rian Kusuma</div>
-                                <div class="team-bio">Spesialis teknik mengemudi di jalur ekstrim dan medan berat.</div>
-                            </div>
+                        <img loading="lazy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRLUGx8-1Y6kdZizRHoAqMmTK7tttrAisks2oF6byxz5WUhKrxDLyOBhQuIKktr8Wz6O6yvLIHcCeIFfOn24E_HlQNwc02oY3hBsj6agCLJrcAwyxfCvJb1QIWoGYImkuup5HQo3vOW0GroapgWIW99qnA-eaV7syzm46d2aF-Ew_w_6-tpoFwRvyGZdgiEUgV4Bj6LQ-UbPxX5s1EtoKeVTY9nRowauzAg37KEDLfCUO_j24BoEBsL-ogj2J2ElDQ7jrqG0VvMD8k=w400-h340-c"
+                            alt="Rian Kusuma" width="400" height="340">
+                        <div class="team-overlay">
+                            <div class="team-role">4x4 Instructor</div>
+                            <div class="team-name">Rian Kusuma</div>
+                            <div class="team-bio">Spesialis teknik mengemudi di jalur ekstrim dan medan berat.</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -868,10 +893,10 @@
             <div class="row g-4">
                 <div class="col-md-4 fade-up">
                     <div class="fleet-card h-100">
-                        <div class="loading=" lazy"-wrap">
-                            <loading="lazy"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEdhHLWmLR3a7pnQCYR3V70md47cJ0znkurHtTcKqgl9AeuppA3CTEe0Z96y9ohPNRiumt-DOwl34vh83f2_pbHwpqFGC2z6AMa3t61C9hUbLb9IndRsIShl7bmMZA0nEqgCArp9Pf-BmeIKiegdcD19yc6SEMc2s5Oqw14JAZroT4MF-2w1-XM_8MlDSOgjimqfheCtNNiwBk-dkLeeMHAcvXclSdKg-MvntRhWdOyBUHOkYTuMJkqdEnNtgbNfIUgduqQtsgeqo"
-                                alt="Jeep Willys">
+                        <div class="img-wrap">
+                            <img loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEdhHLWmLR3a7pnQCYR3V70md47cJ0znkurHtTcKqgl9AeuppA3CTEe0Z96y9ohPNRiumt-DOwl34vh83f2_pbHwpqFGC2z6AMa3t61C9hUbLb9IndRsIShl7bmMZA0nEqgCArp9Pf-BmeIKiegdcD19yc6SEMc2s5Oqw14JAZroT4MF-2w1-XM_8MlDSOgjimqfheCtNNiwBk-dkLeeMHAcvXclSdKg-MvntRhWdOyBUHOkYTuMJkqdEnNtgbNfIUgduqQtsgeqo=w450-h220-c"
+                                alt="Jeep Willys" width="450" height="220">
                         </div>
                         <div class="fleet-card-body">
                             <div class="d-flex justify-content-between align-items-start">
@@ -889,10 +914,10 @@
                 </div>
                 <div class="col-md-4 fade-up">
                     <div class="fleet-card h-100">
-                        <div class="loading=" lazy"-wrap">
-                            <loading="lazy"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuClm90evwbZ5QEz3m7_bYNq0SS-nwOH_sJpDdKulMyrVUBxHzFUup6CzvcOn_IvIo365cVP1_vAz9TXwPq1BAKN3pPr3k1udWyZMDrVJ27N4JbnVY0syWe5cRbltDwC8xzpL5775NE67ZQu3mwJtL0KPGI5ZRCZfGavjZt_utr8BjrQ4JQJ24JV8Xt2IiyeWxRoGjscFyM76RXzTuYXHdYp2YVEpIUFNpRIEwU3pSvk_-bTCfIKIMyk6i2DkwbwG5kBdOzmskVjiBoa"
-                                alt="Land Cruiser">
+                        <div class="img-wrap">
+                            <img loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuClm90evwbZ5QEz3m7_bYNq0SS-nwOH_sJpDdKulMyrVUBxHzFUup6CzvcOn_IvIo365cVP1_vAz9TXwPq1BAKN3pPr3k1udWyZMDrVJ27N4JbnVY0syWe5cRbltDwC8xzpL5775NE67ZQu3mwJtL0KPGI5ZRCZfGavjZt_utr8BjrQ4JQJ24JV8Xt2IiyeWxRoGjscFyM76RXzTuYXHdYp2YVEpIUFNpRIEwU3pSvk_-bTCfIKIMyk6i2DkwbwG5kBdOzmskVjiBoa=w450-h220-c"
+                                alt="Land Cruiser" width="450" height="220">
                         </div>
                         <div class="fleet-card-body">
                             <div class="d-flex justify-content-between align-items-start">
@@ -911,8 +936,9 @@
                 <div class="col-md-4 fade-up">
                     <div class="fleet-card h-100">
                         <div class="img-wrap">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRvgZnEG1Z8z1F2n3_x0pPxuB82HG7TKhNXyDwlBRCQupPcPhn82-o6nfmuGMddO_MTsWwxtL58vzfe8YvJyGEHnFpRp031FARoFTk0IUMBrr0GlwzTf2JP-rasUagSLX_o45wzAxc8hGSCWB7YfuLpGMw_CH0REVkHTTEvPx4qjZiZ6WPn4T5Cm6p1G7xM9EyohqrbhYWMwVMED94K75j9Bwn-ww9aW438B4X5o5q2hiR8g-E9RC0GalvGN6GpOlVEZh_vZNGD7hX"
-                                alt="Modified Jimny">
+                            <img loading="lazy"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRvgZnEG1Z8z1F2n3_x0pPxuB82HG7TKhNXyDwlBRCQupPcPhn82-o6nfmuGMddO_MTsWwxtL58vzfe8YvJyGEHnFpRp031FARoFTk0IUMBrr0GlwzTf2JP-rasUagSLX_o45wzAxc8hGSCWB7YfuLpGMw_CH0REVkHTTEvPx4qjZiZ6WPn4T5Cm6p1G7xM9EyohqrbhYWMwVMED94K75j9Bwn-ww9aW438B4X5o5q2hiR8g-E9RC0GalvGN6GpOlVEZh_vZNGD7hX=w450-h220-c"
+                                alt="Modified Jimny" width="450" height="220">
                         </div>
                         <div class="fleet-card-body">
                             <div class="d-flex justify-content-between align-items-start">
