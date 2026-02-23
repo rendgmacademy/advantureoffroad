@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f4c2a" />
 
     <!-- PRIMARY SEO -->
     <title>Tips Merawat Gardan Jeep Setelah "Main Lumpur" – Offroad Batu Professional</title>
@@ -39,7 +40,7 @@
     <!-- PERFORMANCE OPTIMIZATION -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
     <!-- Preload LCP Image -->
@@ -814,13 +815,13 @@
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Navigasi utama">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html" aria-label="Offroad Batu - Halaman Utama">
                 <i class="bi bi-triangle-fill me-1" style="font-size:1.1rem;color:var(--amber)"></i>
                 Offroad<span class="accent">Batu</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigasi">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
@@ -830,7 +831,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Paket Offroad</a></li>
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
                     <li class="nav-item ms-lg-3"><a class="nav-link btn-cta-nav"
-                            href="https://wa.me/62895639068080">HUBUNGI KAMI</a></li>
+                            href="https://wa.me/62895639068080" aria-label="Hubungi kami via WhatsApp">HUBUNGI KAMI</a></li>
                 </ul>
             </div>
         </div>
@@ -1161,10 +1162,10 @@
                     <p style="font-size:0.85rem; line-height:1.7;">Provider layanan wisata petualangan terpercaya di
                         Batu Malang. Armada terbaik, driver profesional.</p>
                     <div class="d-flex gap-2 mt-3">
-                        <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-btn" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -1207,29 +1208,30 @@
     <!-- Floating Buttons -->
     <div class="floating-btns">
         <button class="btn-floating floating-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-            title="Back to Top">
+            aria-label="Kembali ke atas" title="Back to Top">
             <i class="bi bi-arrow-up"></i>
         </button>
-        <a href="https://wa.me/62895639068080" class="btn-floating wa-float" target="_blank" title="Chat WhatsApp">
+        <a href="https://wa.me/62895639068080" class="btn-floating wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp" title="Chat WhatsApp">
             <i class="bi bi-whatsapp"></i>
         </a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script>
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-
-        // Floating buttons visibility
-        window.addEventListener('scroll', () => {
-            const topBtn = document.querySelector('.floating-top');
-            if (window.scrollY > 300) {
-                topBtn.classList.add('show');
-            } else {
-                topBtn.classList.remove('show');
-            }
+        document.addEventListener('DOMContentLoaded', function () {
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-up').forEach(function (el) { obs.observe(el); });
+            var topBtn = document.querySelector('.floating-top');
+            var scrollTimeout;
+            window.addEventListener('scroll', function () {
+                if (scrollTimeout) return;
+                scrollTimeout = setTimeout(function () {
+                    if (window.scrollY > 300) { topBtn.classList.add('show'); } else { topBtn.classList.remove('show'); }
+                    scrollTimeout = null;
+                }, 100);
+            }, { passive: true });
         });
     </script>
 </body>
